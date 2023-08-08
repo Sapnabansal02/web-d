@@ -1,0 +1,319 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #000;
+    color: #fff;
+}
+.header{
+      width: 100%;
+      height: 100vh;
+
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('s.jpg');
+    background-size:1550px 700px;
+    background-color: rgba(0, 0, 0, 0.887);
+   background-size: cover;
+  background-position: center;
+   padding: 10px 8%;
+   position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+nav .img img{
+   width: 250px;
+   cursor: pointer;
+   background: rgba(0, 0, 0, 0.396);
+
+}
+nav .btn
+{
+    display: flex;
+    margin-top: 2px;
+}
+.btn .eng
+{
+    width: 110px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 19px;
+    border: 2px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+.eng img
+{
+    width: 15px;
+    margin-left: 10px;
+}
+.btn .sign
+{
+    width: 110px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    font-size: 19px;
+    border: none;
+    border-radius: 5px;
+}
+.btn .eng:hover{
+    background-color: transparent;
+}
+.btn .sign:hover{
+    background-color: transparent;
+    border:2px solid red;
+}
+.btn .eng{
+    margin-inline: 22px;
+}
+.main
+{
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 50px;
+    list-style: 2.5em;
+      top: 50%;
+    left: 50%;
+
+}
+.main h1{
+    font-size: 60px;
+    font-family: 'Mukta', sans-serif;
+}
+.main h3{
+    font-size: 44px;
+
+}
+.main p{
+    font-size: 22px;
+}
+
+.input{
+    display: flex;
+    text-align: center;
+    margin-left: 350px;
+}
+.input input{
+    width: 400px;
+    height:58px;
+    border: none;
+    font-size: 24px;
+
+}
+.input button
+{
+    width: 200px;
+    height:60px ;
+    background: red;
+    color: white;
+    font-size: 26px;
+    border: none;
+
+}
+.first
+{
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    margin-top: 90px;
+    padding: 46px;
+    border-top: 5px solid grey;
+}
+.first h1{
+    font-size: 60px;
+   
+}
+.first p
+{
+    font-size: 30px;
+}
+.first img{
+    width: 44%;
+}
+
+.buttons h1{
+    text-align: center;
+    font-weight: 500;
+   font-size: 40px;
+}
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordion h1
+{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #303030;
+    color: white;
+    font-size: 18px;
+    margin-bottom:2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after
+{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+    
+}
+input[type="radio"]
+{
+    display: none;
+}
+.accordion .content
+{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s,padding 0.5s;
+}
+.accordion input[type="radio"]:checked +label+ .content{
+    max-height:600px;
+    padding:30px 20px;
+}
+.accordion input[type="radio"]:checked +label::after{
+   transform: rotate(135deg); 
+}
+.buttons .input
+{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.buttons small{
+  font-size: 13px;
+  margin-left: 500px; 
+}
+.footer
+{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+   
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .list
+{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .list a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row
+{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer .eng{
+    color:#fff ;
+    padding:10px 20px ;
+    border:3px solid #303030 ;
+    background-color: #000;
+}
+
+.cp{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* ------media-queries-for-small-screen------ */
+
+@media only screen and (max-width:600px)
+{
+   .img{
+    width: 100px;
+   }
+   nav .btn
+   {
+    padding: 5px 10px;
+   }
+   nav .eng{
+    padding: 4px 8px;
+
+   }
+   .header-content
+   {
+    position: unset;
+    transform: none;
+    padding-top: 150px;
+   }
+   .header-content h1
+   {
+    font-size: 30px;
+   }
+   .input .buttons{
+    font-size: 12px;
+    padding: 10px 15px;
+   }
+   .text,.img{
+    flex-basis:100% ;
+
+   }
+   .first h1{
+    font-size:30px ;
+   }
+   .first p
+   {
+    font-size: 15px;
+   }
+   .first:nth-child(2),.first:nth-child(4)
+{
+    flex-direction: column-reverse;
+}
+.first{
+    padding: 10px 0;
+}
+.buttons h2
+{
+    font-size: 20px;
+}   
+.accordian.content{
+    font-size: 14px;
+}
+.accordion li label{
+    padding: 10px;
+    font-size: 14px;
+}
+label::after{
+    font-size: 22px;
+}
+}
